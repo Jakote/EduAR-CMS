@@ -6,7 +6,7 @@ from django.core.validators import URLValidator
 from django.contrib.postgres.fields import ArrayField
 from django_better_admin_arrayfield.models.fields import ArrayField
 from django_better_admin_arrayfield.admin.mixins import DynamicArrayMixin
-from djangotoolbox.fields import ListField
+
 #from .forms import BlogContentForm
 
 def script_injection(value):
@@ -15,9 +15,7 @@ def script_injection(value):
                               params={'value': value})
 # Create your models here.
 
-class newModel(models.Model):
-    myatr = models.CharField(blank=True, null=True, max_length=250)
-    list_answers =  ListField()
+
 
 class Term(models.Model):
     term_number = models.IntegerField(unique=True)

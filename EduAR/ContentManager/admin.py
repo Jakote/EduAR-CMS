@@ -1,12 +1,10 @@
 from django.contrib import admin
-from .models import Term, Quiz, Question, QuizQuestions, newModel
+from .models import Term, Quiz, Question, QuizQuestions
 from django_better_admin_arrayfield.admin.mixins import DynamicArrayMixin
 from .forms import *
 from django.db import models
 # Register your models here.
-@admin.register(newModel)
-class MyModelAdmin(admin.ModelAdmin, DynamicArrayMixin):
-    pass
+
 
 admin.site.register(Term)
 admin.site.register(Quiz)
